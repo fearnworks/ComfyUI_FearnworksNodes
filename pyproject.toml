@@ -1,0 +1,14 @@
+[project]
+name = "comfyui_fearnworksnodes"
+description = "A collection of ComfyUI nodes. These nodes are tailored for specific tasks, such as counting files in directories and sorting text segments based on token counts. Currently this is only tested on SDXL 1.0 models. An additional swich is needed to hand 1.x"
+version = "1.0.0"
+license = "LICENSE"
+
+[project.urls]
+Repository = "https://github.com/fearnworks/ComfyUI_FearnworksNodes"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI_FearnworksNodes"
+Icon = ""
