@@ -4,3 +4,5 @@ venv
 .cursorrules
 .env
 *.egg-info
+*.egg-info/
+comfyui_fearnworksnodes.egg-info/PKG-INFO
