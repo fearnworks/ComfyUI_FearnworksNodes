@@ -1,0 +1,5 @@
+version: '3'
+
+tasks: 
+  smoke-test:
+    cmd: python -m unittest tests/smoke.py
