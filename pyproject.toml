@@ -1,8 +1,9 @@
 [project]
 name = "comfyui_fearnworksnodes"
 description = "This extension provides various nodes to support multimodal workflows."
-version = "0.1"
-license = "Apache 2.0"
+version = "0.1.1"
+license = {file = "LICENSE"}
+
 
 [project.urls]
 Repository = "https://github.com/fearnworks/ComfyUI_FearnworksNodes"
@@ -12,3 +13,7 @@ Repository = "https://github.com/fearnworks/ComfyUI_FearnworksNodes"
 PublisherId = "fearnworks"
 DisplayName = "Fearnworks Nodes"
 Icon = ""
+
+[tool.setuptools.packages.find]
+include = ["nodes"]  
+exclude = []  

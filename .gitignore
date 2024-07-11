@@ -3,3 +3,4 @@ __pycache__/
 venv
 .cursorrules
 .env
+*.egg-info

@@ -179,10 +179,3 @@ class FileCountInDirectory:
     def IS_CHANGED(cls, **kwargs):
         return float("NaN")
 
-NODE_CLASS_MAPPINGS = {
-    "Count Tokens (FW)": CountTokens,
-    "Trim To Tokens (FW)": TrimToTokens,
-    "Token Count Ranker(FW)": TokenCountRanker,
-    "Count Files in Directory (FW)": FileCountInDirectory
-
-}
