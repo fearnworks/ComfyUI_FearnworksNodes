@@ -143,13 +143,14 @@ class TokenCountRanker:
         return float("NaN")
 
 import fnmatch
+
 class FileCountInDirectory:
     @classmethod
     def INPUT_TYPES(cls):
         return {
             "required": {
                 "directory_path": ('STRING', {"forceInput": True}),
-                "file_types": ('STRING', {"forceInput": True, "default":"*"})  # String defining file types to count
+                "file_types": ('STRING', {"forceInput": True, "default":"*"})
             }
         }
 
@@ -160,22 +161,26 @@ class FileCountInDirectory:
     def count_files_in_directory(self, directory_path, file_types):
         print(f"Counting files in directory: {directory_path} with file types: {file_types}")
 
-        # Parse file types
         file_types_list = file_types.split(',')
-
-        # Count the number of files matching the file types
         try:
-            file_count = sum(1 for file in os.listdir(directory_path) 
-                             if any(fnmatch.fnmatch(file, pattern.strip()) for pattern in file_types_list) 
-                             and os.path.isfile(os.path.join(directory_path, file)))
+            file_count = sum(
+                len(fnmatch.filter(os.listdir(directory_path), pattern.strip()))
+                for pattern in file_types_list
+            )
         except Exception as e:
             print(f"Error occurred: {e}")
-            return (0, )  # Return 0 in case of an error
+            return (0,)
 
         print(f"Number of files matching types {file_types}: {file_count}")
-        return (file_count, )
+        return (file_count,)
 
     @classmethod
     def IS_CHANGED(cls, **kwargs):
         return float("NaN")
 
+# Keep this function for backwards compatibility if needed
+def file_count_in_directory(directory_path, file_types):
+    count = 0
+    for file_type in file_types.split(','):
+        count += len(fnmatch.filter(os.listdir(directory_path), file_type.strip()))
+    return (count,)
