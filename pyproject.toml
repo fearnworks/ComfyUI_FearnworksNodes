@@ -1,5 +1,5 @@
 [project]
-name = "comfyui-fearnworks-nodes"
+name = "comfyui_fearnworksnodes"
 description = "This extension provides various nodes to support multimodal workflows."
 version = "0.1"
 license = "Apache 2.0"
