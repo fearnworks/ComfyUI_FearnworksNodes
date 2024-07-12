@@ -1,8 +1,8 @@
 [project]
 name = "comfyui_fearnworksnodes"
 description = "This extension provides various nodes to support multimodal workflows."
-version = "0.1.1"
-license = {file = "LICENSE"}
+version = "0.1.2"
+license = "LICENSE"
 
 
 [project.urls]
