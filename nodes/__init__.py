@@ -1,4 +1,4 @@
-from nodes.fw_nodes import CountTokens, FileCountInDirectory,TokenCountRanker,TrimToTokens
+from .fw_nodes import CountTokens, FileCountInDirectory,TokenCountRanker,TrimToTokens
 
 NODE_CLASS_MAPPINGS = {
     "Count Tokens (FW)": CountTokens,
